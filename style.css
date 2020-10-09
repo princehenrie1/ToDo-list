@@ -1,0 +1,131 @@
+/* padding and border added to both sides of the box */
+* 
+{
+    box-sizing: border-box;
+}
+/* no margin or padding */
+ul 
+{
+    margin: 0;
+    padding: 0;
+}
+/* styling the list items */
+ul li
+{
+    position: relative;
+    padding: 12px 8px 12px 40px;
+    background: thistle;
+    font-size: 20px;
+    transition: 0.2s;
+    cursor: pointer;
+    color: rgba(19, 22, 209, 0.829);
+
+/* make list items not selectable */
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+/* set odd list items to a different color */
+ul li:nth-child(even)
+{
+    background: plum;
+}
+/* darker background when pointed */
+ul li:hover
+{
+    background: purple;
+}
+/* when clicked add solid background color */
+ul li.checked
+{
+    background-color: blanchedalmond;
+    color: brown;
+    text-decoration: line-through;
+}
+ul li.checked::before 
+{
+    content: '';
+    position: absolute;
+    border-color:greenyellow;
+    border-style: solid;
+    border-width: 0 2px 2px 0;
+    top: 10px;
+    left: 16px;
+    transform: rotate(45deg);
+    height: 15px;
+    width: 7px;
+}
+/* close button */
+.close
+{
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px 16px;
+    color: black;
+}
+.close:hover
+{
+    background:indianred;
+    color:#eff;
+}
+/* header */
+.header
+{
+    background-color: olive;
+    padding: 20px 30px;
+    color: paleturquoise;
+    text-align: center;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+/* clear floats after header */
+.header:after
+{
+    content: "";
+    display: table;
+    clear: both;
+}
+/* input */
+input
+{
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    width: 50%;
+    padding: 10px;
+    font-size: 15px;
+}
+/* ADD button */
+.addBtn
+{
+    padding: 10px;
+    width: 25%;
+    background: #8067f0;
+    color: lightcyan;
+    text-align: center;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s;
+    border-radius: 0;
+}
+.addBtn:hover
+{
+    background-color: greenyellow;
+    color: black;
+}
+
+
+
+
+
+
+
+
+
+/* <li>Hit the gym<span class="close">x</span></li>
+         <li>Go to the mechanic<span class="close">x</span></li>
+        <li>Meet George<span class="close">x</span></li>
+        <li>Buy Groceries<span class="close">x</span></li>
+        <li>Read a Book<span class="close">x</span></li>
+         <li>Organize Meeting<span class="close">x</span></li> */
